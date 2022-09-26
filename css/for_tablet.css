@@ -1,0 +1,291 @@
+@charset "utf-8";
+.container .sidebar1  {
+	display: none;
+}
+.container {
+	width: 96%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.container .header header .header_pc{
+	background-color: #FFFFFF;
+	display: none;
+}
+.container .header header .header_tablet{
+	background-color: #FFFFFF;
+	text-align: center;
+}
+.container .header header .header_tablet img {
+	width: 100%;
+}
+.container .header header .header_sp{
+	background-color: #FFFFFF;
+	display: none;
+}
+.container .header nav  {
+	margin-bottom: 5px;
+
+}
+.container .content {
+	float: none;
+	width: 100%;
+	padding-top: 0px;
+	padding-left: 3px;
+}
+.container .content h1 {
+	font-size: 16px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	width: auto;
+	margin-left: 0px;
+	margin-right: 6px;
+}
+.container .content h2 {
+	font-size: 16px;
+	margin-top: 0px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+}
+.container .content h3 {
+	margin-top: 0px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	font-size: 16px;
+}
+.container .content article section .panel1{
+    width: 96%;
+    text-align: center;
+    margin-bottom: 15px;
+    clear: both;
+    margin-left: 2%;
+    padding: 0px;
+    margin-top: 0px;
+
+}
+
+.container .content article section .panel2{
+	float: left;
+	width: 45%;
+	margin-left: 18px;
+	text-align: center;
+
+}
+.container .content article section .panel3{
+    float: left;
+    width: 30%;
+    margin-left: 10px;
+    margin-right: 1%;
+    margin-bottom: 15px;
+
+}
+
+.container .content article section .center .purple_bold18 {
+	font-size: 18px;
+}
+
+
+.container .content article section ol li {
+	font-size: 14px;
+}
+
+
+.fltlft { /* このクラスを使用すると、ページ内でエレメントを左にフローティングさせることができます。フローティングさせるエレメントは、ページ内で横に並べて表示するエレメントの前に指定する必要があります。 */
+    width: 30%;
+    margin-left: 20px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+
+
+/* ~~ その他の float/clear クラス ~~ */
+.fltrt {  /* このクラスを使用すると、ページ内でエレメントを右にフローティングさせることができます。フローティングさせるエレメントは、ページ内で横に並べて表示するエレメントの前に指定する必要があります。 */
+	width: 25%;
+	margin-right: 20px;
+	float: right;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.container .content article section .pankuzu {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+
+
+.container .content article .address li {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.container .content article .address {
+	text-align: center;
+	width: 60%;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 20%;
+}
+
+
+
+.container .footer footer .footer1 dt {
+	font-weight: bold;
+	color: #656565;
+	float: left;
+}
+.container .footer footer .footer1 dd {
+	margin-left: 80px;
+	margin-bottom: 10px;
+}
+
+.container .content article section .price_table  {
+	margin-left: 20px;
+}
+.container .content article section .price_table dt {
+	font-weight: bold;
+	margin-left: 20px;
+	float: left;
+}
+.container .content article section .price_table dd {
+	margin-left: 150px;
+	margin-bottom: 15px;
+}
+.container .content article section .price_table02  {
+	margin-left: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.container .content article section .price_table02 dt {
+	font-weight: bold;
+	margin-left: 20px;
+	float: left;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCC;
+}
+.container .content article section .price_table02 dd {
+	margin-left: 50%;
+	margin-bottom: 20px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #999;
+	margin-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.container .content article section .price_table03  {
+	margin-left: 20px;
+}
+.container .content article section .price_table03 dt {
+	font-weight: bold;
+	margin-left: 20px;
+	float: left;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCC;
+}
+.container .content article section .price_table03 dd {
+	margin-left: 55%;
+	margin-bottom: 20px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	margin-right: 20px;
+}
+
+.container .content article section ol li {
+	font-size: 14px;
+}
+.container .content article section .center .foot_tel {
+	font-size: 18px;
+}
+.container .content article section .footer_logo {
+	width: 30%;
+	margin-left: 35%;
+}
+.container .content article section .img_sp_tab {
+	padding: 0px;
+}
+.container .content article section .img_sp_tab p {
+	width: 20%;
+	margin-left: 1%;
+	float: left;
+}
+.center .foot_tel a {
+    font-size: 1.8em;
+}
+
+
+/*ナビゲーション用css*/
+#menu{
+    width: 100%;
+    max-width: 960px;
+    padding: 0;
+    margin-top: 0;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    color: #FFFFFF;
+}
+
+#menu li{
+    display: block;
+    float: left;
+    width: 24.87%;
+    margin: 0;
+    padding: 0;
+    border-left: 0.05em solid rgba(255,255,255,0.6);
+    border-bottom: 0.05em solid rgba(255,255,255,0.6);
+}
+#menu .nav02 {
+    border-left: 0px none #FFFFFF;
+}
+
+#menu li a{
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	padding-top: 15px;
+	padding-right: 0;
+	padding-bottom: 13px;
+	padding-left: 0;
+	font-size: 12px;
+	
+}
+#menu li a:hover{
+
+}
+#toggle{ 
+ display: none;
+}
+.panel110{
+	display: block;
+    text-align: center;
+   
+    clear: both;
+    margin-left: 2%;
+    align-items: center;
+	padding: 30px 30% 30px;
+
+}

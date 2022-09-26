@@ -1,0 +1,763 @@
+@charset "utf-8";
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+}
+
+/* ~~ エレメント / タグセレクター ~~ */
+ul, ol, dl { /* ブラウザー間の相違により、リストの余白とマージンをゼロにすることをお勧めします。一貫性を保つために、量をここで指定するか、リストに含まれるリスト項目 (LI、DT、DD) で指定できます。より詳細なセレクターを記述しない限り、ここで指定する内容が .nav リストにも適用されることに注意してください。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 上マージンを削除すると、マージンを含む div からマージンがはみ出す場合があるという問題を回避できます。残った下マージンにより、後続のエレメントからは離されます。 */
+	padding-right: 15px;
+	padding-left: 15px; /* div 自体ではなく div 内でエレメントの両側に余白を追加すると、ボックスモデル計算が不要になります。代わりに、両側に余白を指定した div をネストして使用することもできます。 */
+}
+a img { /* このセレクターは、一部のブラウザーでイメージをリンクで囲んだ場合にイメージの周囲に表示される初期設定の青いボーダーを削除します。 */
+	border: none;
+}
+
+/* ~~ サイトのリンクのスタイル付けは、ホバー効果を作成するセレクターグループも含め、この順序にする必要があります。~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* 非常に特殊な表示方法でリンクをスタイル付けする場合を除き、一目で見分けられるように下線を指定することをお勧めします。 */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* このセレクターグループは、キーボードを使用するユーザーに対し、マウスを使用するユーザーと同じホバー効果を提供します。 */
+	text-decoration: none;
+}
+
+/* ~~ この固定幅コンテナが他の div を囲みます。~~ */
+.container {
+	width: 960px;
+	background-color: #FFF; /* 幅に加え、両側を自動値とすることで、レイアウトが中央に揃います。 */
+	border: 1px solid rgba(204,204,204,1);
+	padding: 0px;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+/* ~~ ヘッダーには幅は指定されません。ヘッダーはレイアウトの幅全体まで広がります。ヘッダーには、ユーザー独自のリンクされたロゴに置き換えられるイメージプレースホルダーが含まれます。~~ */
+header {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+.container .header {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ~~ ヘッダーには幅は指定されません。ヘッダーはレイアウトの幅全体まで広がります。ヘッダーには、ユーザー独自のリンクされたロゴに置き換えられるイメージプレースホルダーが含まれます。~~ */
+header {
+	background-color: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+/* ~~ レイアウトに使用するカラムです。~~ 
+
+1) 余白は、div の上部または下部にのみ配置されます。これらの div 内のエレメントには、それ自体に余白があるので、ボックスモデル計算を行う必要がありません。ただし、div 自体に両側の余白やボーダーを指定した場合、その値が加算されたものが合計幅になることに注意してください。div 内のエレメントの余白を削除し、さらにその div 内に、全体のデザインに必要な幅や余白を指定していない 2 つ目の div を追加することもできます。
+
+2) カラムはすべてフロートしているため、マージンは指定されていません。マージンを追加する必要がある場合は、フロート方向には指定しないでください (例えば、右フロートに設定した div の右マージン)。多くの場合、代わりに余白を使用できます。このルールに従わない場合は、div のルールに「display:inline」宣言を追加し、一部のバージョンの Internet Explorer でマージンが 2 倍になるバグを回避する必要があります。
+
+3) クラスはドキュメント内で複数回使用できるので (またエレメントには複数のクラスを適用できます)、カラムには ID ではなくクラス名が割り当てられます。例えば、必要に応じて 2 つのサイドバー div をスタックできます。クラスを各ドキュメントで一度しか使用しないのであれば、ユーザーの好みに応じて、クラス名を ID に変更することができます。
+
+4) ナビゲーションを左ではなく右に配置したい場合、これらのカラムを反対方向にフロートさせると (すべて左方向にする代わりに、すべて右方向に設定)、反転してレンダリングされます。HTML ソース内で div を移動する必要はありません。
+
+*/
+.sidebar1 {
+	float: left;
+	width: 220px;
+	background-color: #FFFFFF;
+	padding-bottom: 10px;
+	padding-top: 8px;
+}
+
+
+
+
+
+/*文書装飾*/
+
+.tel {
+	font-size: 16px;
+	font-weight: bold;
+}
+.img  {
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+.center {
+	text-align: center;
+}
+.content {
+	float: left;
+	width: 730px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	padding-top: 0px;
+}
+.container article .content section {
+	margin-bottom: 40px;
+}
+/*トップページの帯の色*/
+.container .content .top-page {
+	font-size: 18px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 3px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B2B2B2;
+	border-right-color: #B2B2B2;
+	border-bottom-color: #B2B2B2;
+	border-left-color: #08B700;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	background-color: #F6F6F6;
+	font-weight: bold;
+}
+.container .content h1 {
+	font-size: 18px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 3px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B2B2B2;
+	border-right-color: #B2B2B2;
+	border-bottom-color: #B2B2B2;
+	border-left-color: #08B700;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+	background-color: #F6F6F6;
+	font-weight: bold;
+}
+.container .content h2 {
+	font-size: 16px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 3px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #B2B2B2;
+	border-right-color: #B2B2B2;
+	border-bottom-color: #B2B2B2;
+	border-left-color: #EF0101;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	font-weight: bold;
+	background-color: #F59CBC;
+	color: #fff;
+}
+.container .content h3 {
+	font-size: 16px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #999;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	font-weight: bold;
+}
+.container .content h4 {
+	font-size: 16px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	color: #EF0101;
+	font-weight: bold;
+}
+.container .content h5 {
+	font-size: 16px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 16px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	color: #06F;
+}
+.container .content p {
+	font-size: 16px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 32px;
+	margin-bottom: 20px;
+}
+.container .content ul {
+	font-size: 16px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.img_main {
+	text-align: right;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 0px;
+}
+.img_top_menu_first {
+	padding: 0px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 20px;
+	margin-bottom: 0px;
+	margin-left: 16px;
+}
+
+.img_top_menu {
+	padding: 0px;
+	float: left;
+	margin-top: 0px;
+	margin-right: 18px;
+	margin-bottom: 0px;
+}
+.img_top_menu_end {
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+
+/* ~~ このセレクターグループは、.content 内のリストに領域間隔を指定します。~~ */
+.content ul, .content ol { 
+	padding: 0 2% 15px 2%; /* この余白は、上述の見出しと段落ルールの右の余白を表します。下の余白はリスト内の他のエレメントとの間隔用に配置され、左の余白はインデント作成用に配置されています。これは必要に応じて調整できます。 */
+}
+
+nav {
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* ~~ ナビゲーションリストのスタイル付け (Spry などの事前作成済みのフライアウトメニューを使用する場合は削除できます) ~~ */
+ul.nav {
+	list-style: none; /* リンク用の上部のボーダーを作成します。他のすべてのものは LI 上で下部のボーダーを使用して配置されます。 */
+	margin-bottom: 15px;
+}
+
+ul.nav li {
+	float: left;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,1);
+}
+ul.nav a, ul.nav a:visited { /* これらのセレクターをグループ化することで、リンクのボタン表示が訪問後も確実に保持されます。 */
+	display: block; /* リンクにブロックプロパティを指定し、リンクが含まれる LI 全体がリンクになるようにします。これにより、領域全体がマウスのクリックに反応するようになります。 */
+	width: 159px;  /*この幅により、IE6 でボタン全体をクリックできるようになります。IE6 をサポートする必要がない場合は削除できます。適切な幅を計算するには、サイドバーコンテナの幅からそのリンクの余白を減算します。 */
+	text-decoration: none;
+	background-color: #B0AFCC;
+	margin: 0px;
+	font-weight: bold;
+	color: #FFF;
+	text-align: center;
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #FFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(255,255,255,1);
+}
+
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* マウスを使用する場合もキーボードを使用する場合も、背景色とテキストカラーを変更します。 */
+	background-color: #45B177;
+	color: #FFF;
+}
+footer {
+	font-size: 14px;
+	text-align: center;
+	clear: both;
+}
+.footer footer p{
+    font-size: 14px;
+    text-align: center;
+    clear: both;
+    background-color: #FF669A;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer footer p a{
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+/* ~~ その他の float/clear クラス ~~ */
+img {  /* このクラスを使用すると、ページ内でエレメントを右にフローティングさせることができます。フローティングさせるエレメントは、ページ内で横に並べて表示するエレメントの前に指定する必要があります。 */
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+.container article .content section ol li  {
+	margin-bottom: 20px;
+	line-height: 27px;
+}
+
+.clearfloat { /* このクラスは、#footer が #container から削除されているか取り出されている場合に、<br /> または空の div で、フローティングさせる最後の div に続く最後のエレメントとして (#container 内に) 配置できます。 */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+section {
+	margin-bottom: 35px;
+}
+
+.toiawase {
+	margin-top: 1px;
+	margin-right: 1px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-bottom: 10px;
+}
+.container .sidebar1 .toiawase h2 {
+	background-color: #F00001;
+	font-size: 16px;
+	color: #FFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+}
+.container .sidebar1 .toiawase a {
+	text-decoration:none;
+}
+.container .sidebar1 aside .toiawase p {
+	line-height: 31px;
+}
+
+
+
+/*　メニューバー　*/
+
+.menu {
+	margin-top: 5px;
+	margin-right: 1px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+}
+.container .sidebar1 .menu h2 {
+	background-color: #05B700;
+	font-size: 16px;
+	color: #FFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+}
+
+
+.container .sidebar1 .menu a {
+	text-decoration:none;
+}
+.menu_p    {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #999;
+	font-size: 16px;
+	margin-top: 6px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+}
+.menu_p_end    {
+	font-size: 16px;
+	margin-top: 6px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+}
+.menu2 {
+	border: 1px solid #999999;
+	margin-top: 5px;
+	margin-right: 1px;
+	margin-bottom: 10px;
+	margin-left: 2px;
+}
+.container .sidebar1 .menu2 h2 {
+	background-color: #999999;
+	font-size: 16px;
+	color: #FFF;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 0px;
+}
+
+
+.container .sidebar1 .menu a {
+	text-decoration:none;
+}
+.menu2_p    {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #999;
+	font-size: 12px;
+	margin-top: 6px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+}
+.menu2_p_end    {
+	font-size: 12px;
+	margin-top: 6px;
+	margin-right: 5px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	padding-top: 4px;
+	padding-right: 0px;
+	padding-bottom: 4px;
+	padding-left: 10px;
+}
+.container .content section  {
+	margin-bottom: 10px;
+}
+.container .content section p {
+	margin-left: 10px;
+}
+.container article .content section ul {
+	font-size: 16px;
+}
+.container .content article section ul li {
+	line-height: 28px;
+	list-style-type: disc;
+	color: #009AFE;
+}
+
+.container .content article section ul li span{
+	color: #000;
+}
+.container .content article section ol li {
+	line-height: 28px;
+	list-style-type: decimal;
+	margin-left: 20px;
+}
+.red_bold18 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #D50000;
+}
+.orange_bold18 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #FF6600;
+}
+.green_bold {
+	font-weight: bold;
+	color: #12BF01;
+}
+.green_bold18 {
+	font-size: 18px;
+	font-weight: bold;
+	color: #00863F;
+}
+.red_bold {
+    font-weight: bold;
+    color: #F00001;
+}
+.point12 {
+	font-size: 12px;
+}
+.faq_q {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	background-image: url(../templatere_res/smile-clean.info/res/pict/bk_q.fw.png);
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	padding-bottom: 15px;
+	padding-top: 8px;
+}
+.faq_a {
+	font-size: 16px;
+	background-image: url(../templatere_res/smile-clean.info/res/pict/bk_a.fw.png);
+	padding-left: 40px;
+	background-repeat: no-repeat;
+	margin-left: 40px;
+	margin-bottom: 30px;
+}
+strong {
+    font-weight: bold;
+}
+.right {
+
+}
+.nomal {
+    color: #2F2F2F;
+    font-weight: normal;
+}
+.nomal_torikeshi {
+    color: #2F2F2F;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+
+
+
+.container .content article section .price_table  {
+
+}
+.container .content article section .price_table dt {
+	font-weight: bold;
+	color: #05B700;
+}
+.container .content article section .price_table dd {
+
+}
+.container .content article section .price_table02  {
+
+}
+.container .content article section .price_table02 dt {
+	font-weight: bold;
+	color: #05B700;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCC;
+}
+.container .content article section .price_table02 dd {
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: #999;
+    font-size: 16px;
+    font-weight: bold;
+    color: #009AFE;
+}
+.container .content article section .price_table03  {
+
+}
+.container .content article section .price_table03 dt {
+	font-weight: bold;
+	color: #05B700;
+	margin-left: 20px;
+	float: left;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCC;
+}
+.container .content article section .price_table03 dd {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+}
+.container .content article section .return_top {
+	font-size: 14px;
+	text-align: right;
+}
+.container .content article section .center .foot_tel {
+    font-weight: bold;
+    color: #108D49;
+    margin-top: 20px;
+}
+.container .content article section .center .foot_tel a {
+    text-decoration: none;
+    color: #FF669A;
+}
+
+
+.container .content article section .center img {
+    margin-bottom: 15px;
+    border-left: 0px none #FFFFFF;
+}
+.container .content article section .price_table02 dt sup {
+	font-size: 9px;
+	padding-bottom: 10px;
+	vertical-align: top;
+}
+.container .content article section .pankuzu a {
+    color: #333333;
+    text-decoration: none;
+}
+.head_btn  {
+    text-align: center;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    background-color: #999999;
+    display: block;
+}
+.head_btn a  {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+
+/*　トグルボタン用　*/
+
+#menu li{
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgba(255,255,255,0.6);
+    background-color: #05B700;
+}
+#menu .nav01 {
+    border-left-width: 0px;
+}
+
+#menu li a{
+	display: block;
+	padding: 12px 0 10px;
+	color: #FFF;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 14px;
+}
+#menu li a:hover{
+	color: #F59CBC;
+	opacity: 0.7;
+}
+#toggle{
+    display: none;
+    color: #FFFFFF;
+}
+/*　googleマップ、youtube埋め込み用*/
+.embed {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.embed iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 95%;
+	height: 100%;
+	margin-left: 2.5%;
+	margin-bottom: 20px;
+}
+strong {
+    font-weight: bold;
+}
+
+.container .content article section p .link_pink a {
+    font-weight: bold;
+    color: #F24F8C;
+}
+
+.blue_bold{
+	color: #FF669A;
+	font-weight: bold;
+}
+
+.eigyou{
+	color: #F00001;
+	font-weight: bold;
+}
+
+.ozon-area {
+	padding: 5% 15%;
+	
+}
+
+.video{
+	padding: 0 2%;
+}
+
+.panel110{
+	padding: 0 1% 0 2%;
+}
+
+
+@media all and (max-width: 768px) {
+
+	.embed{
+		height: 200px;
+	}
+	.embed iframe {
+	  height: 380px;
+	}
+	.container .content .top-page{
+	font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 15px;
+    width: auto;
+    margin-left: 0px;
+    margin-right: 6px;
+}
+
+
+
+  }

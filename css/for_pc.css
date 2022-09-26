@@ -1,0 +1,287 @@
+@charset "utf-8";
+.container   {
+	margin-bottom: 10px;
+}
+
+.container .header header {
+	background-color: #FFFFFF;
+	margin-top: 0px;
+}
+.container .header header .header_pc{
+	background-color: #FFFFFF;
+}
+.container .header header .header_pc .header_pc_left {
+	width: 500px;
+	margin: 0px;
+	padding: 0px;
+	float: left;
+}
+.container .header header .header_pc .header_pc_right {
+	margin: 0px;
+	padding: 0px;
+	width: 460px;
+	float: left;
+}
+
+
+.container .header header .header_tablet{
+	background-color: #FFFFFF;
+	display: none;
+	text-align: center;
+}
+.container .header header .header_sp{
+	background-color: #FFFFFF;
+	display: none;
+}
+
+
+nav {
+	margin: 0px;
+	padding: 0px;
+}
+.container .sidebar1 aside .side_banner {
+	padding: 0px;
+	width: 201px;
+	margin-top: 3px;
+	margin-right: 0px;
+	margin-bottom: 1px;
+	margin-left: 10px;
+}
+
+
+
+.container .content article section ol li {
+	line-height: 30px;
+	margin-bottom: 20px;
+
+}
+.container .content article section .panel1{
+	width: 700px;
+	text-align: center;
+	clear: none;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+
+}
+
+.container .content article section .panel2{
+	float: left;
+	width: 47%;
+	margin-left: 18px;
+	text-align: center;
+	margin-bottom: 15px;
+
+}
+.container .content article section .panel3{
+	float: left;
+	width: 220px;
+	margin-left: 18px;
+	margin-top: 20px;
+	text-align: center;
+	margin-bottom: 15px;
+
+}
+
+.container .content article section .price_table  {
+	margin-left: 20px;
+}
+.container .content article section .price_table dt {
+	font-weight: bold;
+	margin-left: 20px;
+	float: left;
+}
+.container .content article section .price_table dd {
+	margin-left: 200px;
+	margin-bottom: 15px;
+}
+.container .content article section .price_table02  {
+	margin-left: 20px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.container .content article section .price_table02 dt {
+	font-weight: bold;
+	margin-left: 20px;
+	float: left;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCC;
+}
+.container .content article section .price_table02 dd {
+	margin-left: 50%;
+	margin-bottom: 20px;
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #999;
+	margin-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 15px;
+}
+.container .content article section .price_table03  {
+	margin-left: 20px;
+}
+.container .content article section .price_table03 dt {
+	font-weight: bold;
+	margin-left: 20px;
+	border-bottom-width: 1px;
+	border-bottom-color: #CCC;
+}
+.container .content article section .price_table03 dd {
+	margin-left: 50%;
+	margin-bottom: 20px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCC;
+	margin-right: 20px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.container .content h3 {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #B2B2B2;
+	margin-top: 0px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-bottom: 6px;
+	padding-left: 15px;
+	font-size: 16px;
+}
+.container .content article section p {
+	padding-left: 020px;
+}
+
+.container .content article section .center .foot_tel {
+	font-size: 24px;
+}
+.container .content article section .footer_logo {
+	width: 243px;
+	margin-left: 250px;
+}
+.container .content article section .img_sp_tab {
+	padding: 0px;
+	display: none;
+}
+
+
+.fltlft { /* このクラスを使用すると、ページ内でエレメントを左にフローティングさせることができます。フローティングさせるエレメントは、ページ内で横に並べて表示するエレメントの前に指定する必要があります。 */
+    width: 30%;
+    margin-left: 20px;
+    float: left;
+    margin-bottom: 15px;
+}
+
+
+
+/* ~~ その他の float/clear クラス ~~ */
+.fltrt {  /* このクラスを使用すると、ページ内でエレメントを右にフローティングさせることができます。フローティングさせるエレメントは、ページ内で横に並べて表示するエレメントの前に指定する必要があります。 */
+	width: 180px;
+	margin-right: 20px;
+	float: right;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.container .content article section .pankuzu {
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	padding-left: 5px;
+	font-size: 13px;
+}
+
+
+/*テーブル*/
+table.table01{
+	border-top: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-collapse: collapse;
+	border-spacing: 0;
+	background-color: #ffffff;
+	empty-cells: show;
+	margin-top: 3px;
+	margin-bottom: 30px;
+	width: 90%;
+	margin-left: 5%;
+}
+.table01 th{
+	border-right:1px solid #999999;
+	border-bottom:1px solid #999999;
+	color:#330000;
+	background-color:#FFFFCC;
+	text-align:center;
+	padding:0.3em 1em;
+	font-size: 16px;
+}
+.table01 td{
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #999999;
+	line-height: 20px;
+	margin-left: 0px;
+	font-size: 16px;
+	padding-top: 5px;
+	padding-right: 1px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+.sidebar1 aside .toiawase p .tel_sidebar {
+	font-weight: bold;
+	color: rgba(5,183,0,1);
+	font-size: 18px;
+}
+.sidebar1 aside .toiawase p .mobile_sidebar {
+	font-weight: bold;
+	color: rgba(5,183,0,1);
+	font-size: 16px;
+}
+.center .foot_tel a {
+    font-size: 32px;
+}
+
+.header nav #menu-box {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/*ナビゲーション用css*/
+#menu{
+	width: 100%;
+	max-width: 960px;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0px;
+}
+
+#menu li{
+	display: block;
+	float: left;
+	width: 159px;
+	margin: 0;
+	padding: 0;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: rgba(255,255,255,0.6);
+}
+#menu li a{
+    display: block;
+    padding: 12px 0 10px;
+    text-align: center;
+    text-decoration: none;
+	
+}
+#menu li a:hover{
+
+}
+#toggle{ 
+ display: none;
+}
